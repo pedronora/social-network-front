@@ -21,7 +21,7 @@ export default {
   <form @submit.prevent="createPost">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Título</label>
-      <input v-model="post.title" type="text" class="form-control" id="tituloPost" />
+      <input v-model="post.title" type="text" class="form-control" id="tituloPost" required />
     </div>
     <div class="mb-3">
       <label for="exampleFormControlTextarea1" class="form-label">Conteúdo</label>
@@ -30,6 +30,7 @@ export default {
         class="form-control"
         id="exampleFormControlTextarea1"
         rows="3"
+        required
       ></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Postar</button>
